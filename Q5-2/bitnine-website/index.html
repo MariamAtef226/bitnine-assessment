@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>AgensSQL ⋆ Bitnine Global Inc.</title>
+
+    <link rel="icon" href="https://bitnine.net/wp-content/uploads/2021/02/cropped-favicon-32x32.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Monda:wght@400;700&family=Noto+Sans+KR:wght@100;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- contacts navbar in desktop view only -->
+
+    <section class="contacts d-none d-lg-flex justify-content-between p-2 position-fixed w-100">
+
+        <div class="ps-5 languages">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Select Language</option>
+                <option value="en">English</option>
+                <option value="ko">Korean</option>
+            </select>
+        </div>
+
+        <div class="d-flex align-items-center">
+
+            <div class="input-group">
+                <input type="text" class="form-control" name='search' placeholder="SEARCH">
+            </div>
+
+
+            <div><a class="contact-link" href="https://bitnine.net/contact/">CONTACT</a></div>
+
+
+            <div class="w-socials-item github">
+                <a class="w-socials-item-link" target="_blank" href="https://github.com/bitnine-oss/agensgraph">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+
+            <div class="w-socials-item youtube">
+                <a class="w-socials-item-link" target="_blank"
+                    href="https://www.youtube.com/channel/UCBJNYamALEqrfxiOCgYyP2g/featured?view_as=subscriber">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+
+            <div class="w-socials-item linkedin">
+                <a class="w-socials-item-link" target="_blank" href="https://www.linkedin.com/company/bitnineglobal/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="w-socials-item facebook">
+                <a class="w-socials-item-link" target="_blank" href="https://www.facebook.com/bitninesns/">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+            <div class="w-socials-item medium">
+                <a class="w-socials-item-link" target="_blank" href="https://www.facebook.com/bitninesns/">
+                    <i class="fa-solid fa-m"></i>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- navbar -->
+    <section class="lower w-100 d-lg-flex justify-content-lg-between pt-1 pb-2  pt-md-4 pb-md-4 ">
+        <!-- the following image is viewed in desktop only -->
+        <a class='nav-brand' href="https://bitnine.net/">
+            <img class="d-none d-lg-inline ps-5" src="https://bitnine.net/wp-content/uploads/2021/02/b_logo.png"
+                width="300" height="70" alt="company's logo">
+        </a>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+
+                <a class='nav-brand d-lg-none' href="https://bitnine.net">
+                    <img class="for_default " src="https://bitnine.net/wp-content/uploads/2021/02/b_logo.png"
+                        width="160" height="30" alt="company's logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active" href="https://bitnine.net/agensgraph/" data-bs-toggle="dropdown">
+                                products </a>
+                            <ul class="dropdown-menu">
+                                <li><a id='dropitem1'
+                                        class="dropdown-item text-light d-flex justify-content-between align-items-center"
+                                        href="https://bitnine.net/graph-database/"> Graph Database &nbsp;<i
+                                            class="ms-auto fa-solid fa-angle-right"></i></a>
+                                    <ul id='submenu1' class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item text-light"
+                                                href="https://bitnine.net/agensgraph/">AgensGraph</a></li>
+                                        <li><a class="dropdown-item text-light" href="https://age.apache.org/">Apache
+                                                AGE</a></li>
+                                        <li><a class="dropdown-item text-light" href="https://bitnine.net/ag-cloud/">AG
+                                                Cloud</a></li>
+                                        <li><a class="dropdown-item text-light"
+                                                href="https://bitnine.net/agensbrowser/">Visualization & Analytics</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a id='dropitem2'
+                                        class="dropdown-item text-light d-flex justify-content-between align-items-center"
+                                        href="https://bitnine.net/"> Relational Database &nbsp;<i
+                                            class="ms-auto fa-solid fa-angle-right"></i></a>
+                                    <ul id='submenu2' class="submenu dropdown-menu">
+                                        <li><a class="dropdown-item text-light" href="https://bitnine.net/">Agens
+                                                SQL</a></li>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://bitnine.net/graph-database-use-case/">use cases</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://bitnine.net/services/">services</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="https://bitnine.net/documentation/" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                resources
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-light"
+                                        href="https://bitnine.net/documentation/">Documentation</a></li>
+                                <li><a class="dropdown-item text-light" href="https://bitnine.net/learn/">Learn</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="https://bitnine.net/blog/">blog</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="https://bitnine.net/company/" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                company
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-light" href="https://bitnine.net/company/">About Us</a>
+                                </li>
+                                <li><a class="dropdown-item text-light" href="https://bitnine.net/contact/">Contact</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link " href="https://bitnine.net/ir-announcement/" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                IR
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-light" href="#">Korean </a></li>
+                                <li><a class="dropdown-item text-light" href="#">Korean </a></li>
+                            </ul>
+                        </li>
+
+                        <button class="btn button-blue ms-2">
+                            <a class='text-decoration-none text-light'
+                                href='https://bitnine.net/agensgraph-downloads/'>TRY FREE</a>
+                        </button>
+
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+
+        <div class="ps-2 pe-2 w-75 languages d-md-none">
+            <select class="form-select" style="font-size: 0.6rem;">
+                <option selected>Select Language</option>
+                <option value="en">English</option>
+                <option value="ko">Korean</option>
+            </select>
+        </div>
+
+    </section>
+
+    <!-- section 1-->
+    <div>
+        <div class=" pt-5">
+            <div class="pt-5">
+                <div class=" pt-5">
+                    <div class=" pt-5 ">
+                        <div class=" text-center pb-5 p-lg-5"><img width="301" height="61"
+                                src="https://bitnine.net/wp-content/uploads/2022/04/AgenSQL-Logo.png"
+                                class="attachment-large size-large" alt=""
+                                srcset="https://bitnine.net/wp-content/uploads/2022/04/AgenSQL-Logo.png 301w, https://bitnine.net/wp-content/uploads/2022/04/AgenSQL-Logo-300x61.png 300w"
+                                sizes="(max-width: 301px) 100vw, 301px"></div>
+
+                        <h3 style="font-size: 21px;line-height: 1.2;text-align: center"><strong>An integration of
+                                Bitnine’s DB
+                                technology and PG expertise</strong></h3>
+                        <div>
+                            <div>
+                                <p class="text-center">AgensSQL is an all-new relational DBMS based on PostgreSQL, with
+                                    years of expertise<br>
+                                    and knowledge accumulated through database research and development.</p>
+                                <p class="text-center">The enterprise package, along with AgensSQL engine, is an
+                                    all-in-one solution that ensures<br>
+                                    the efficiency and scalability of data management.</p>
+                                <p class="text-center">Get AgensSQL now for stable operation and management services at
+                                    a reduced<br>
+                                    maintenance cost.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="'landing-buttons d-flex w-100 justify-content-center">
+            <button class="btn button-blue me-3">
+                <a class='text-decoration-none text-light' href="https://bitnine.net/contact/">
+                    CONTACT
+                </a>
+            </button>
+            <button class="btn button-blue ms-lg-3 me-lg-3">
+                <a class='text-decoration-none text-light' href="https://bitnine.net/agenssql_brochure_ko/">
+
+                    BROCHURE
+                </a></button>
+            <button class="btn button-blue ms-3">
+                <a class='text-decoration-none text-light' href="https://blog.naver.com/bitnineglobal/222785715055"
+                    target="_blank">
+
+                    BLOG
+                </a>
+            </button>
+        </div>
+    </div>
+
+    <!-- section 2-->
+
+    <div class="mt-5 mb-5 text-center grey-bg section-img">
+        <div class="pt-4 pb-4 text-center">
+            <div class="pt-4 pb-4 text-center">
+
+                <div class="pt-5 pb-5 text-center">
+                    <img src="https://bitnine.net/wp-content/uploads/2022/04/img_diagram_eng-e1651143428347.png" alt=""
+                        scale="0">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- section 3-->
+
+    <div class="mt-5 mb-5 text-center section-img section-3">
+        <div class="pt-5 pb-5 text-center">
+            <div class="pt-5 pb-5 text-center">
+
+                <div class="pt-5 pb-5 text-center">
+                    <h2 class="text-center" style="color: #000; line-height: 1.1;"><strong>Key features</strong></h2>
+                    <div>
+                        <p class="text-center sect-3-p pb-3">Manage your data with Agens Enterprise Package<br>
+                            Essential enterprise features such as high availability and sharding are provided</p>
+                    </div>
+                    <img src="https://bitnine.net/wp-content/uploads/2022/04/img_key-features_eng.png" alt=""
+                        srcset="https://bitnine.net/wp-content/uploads/2022/04/img_key-features_eng.png 4584w, https://bitnine.net/wp-content/uploads/2022/04/img_key-features_eng-300x118.png 300w, https://bitnine.net/wp-content/uploads/2022/04/img_key-features_eng-768x302.png 768w, https://bitnine.net/wp-content/uploads/2022/04/img_key-features_eng-1024x402.png 1024w, https://bitnine.net/wp-content/uploads/2022/04/img_key-features_eng-600x236.png">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- section 4-->
+
+    <div class="mt-5 mb-5 text-center grey-bg section-img">
+        <div class="pt-5 pb-5 text-center">
+            <div class="pt-5 pb-5 text-center">
+
+                <h2 class="text-center pb-3" style="color: #000; line-height: 1.1;"><strong>AgensSQL DB Engine</strong>
+                </h2>
+                <div class="wpb_text_column  vc_custom_1651126030296">
+                    <div class="wpb_wrapper">
+                        <h5 class="text-center pb-3"><span style="text-decoration: underline;"><strong>Enhanced Data
+                                    Security</strong></span></h5>
+                    </div>
+                </div>
+                <p class="text-center pb-4">AgensSQL is a PostgreSQL-based DBMS<br>
+                    that guarantees optimal security and stability.</p>
+
+                <div class="images-grid row justify-content-center p-0 m-0">
+
+                    <div class="col-lg-3  d-flex justify-content-center mb-3 p-0">
+                        <div class="box position-relative pt-5 pb-5">
+                            <img src="https://bitnine.net/wp-content/uploads/2022/04/Password-Profile.png" alt=""
+                                scale="0">
+                            <div
+                                class="position-absolute top-0 start-0 hidden-div p-4  text-start d-flex align-items-center ">
+                                <ul>
+                                    <li> user password policy reinforces login security</li>
+                                    <li>excessive failed login attempts lock an account</li>
+                                    <li>define rules for password complexity</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3  d-flex justify-content-center mb-3 p-0">
+                        <div class="box position-relative pt-5 pb-5">
+                            <img src="https://bitnine.net/wp-content/uploads/2022/04/Data-Redaction.png" alt=""
+                                scale="0">
+                            <div
+                                class="position-absolute top-0 start-0 hidden-div p-4 text-start d-flex align-items-center ">
+                                <ul>
+                                    <li> enhanced data security of user personal information</li>
+                                    <li>resolve privacy issues in preparation for security audits</li>
+                                    <li>encryption or masking with unidentifiable special characters</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3  d-flex justify-content-center p-0 ">
+                        <div class="box position-relative pt-5 pb-5">
+                            <img src="https://bitnine.net/wp-content/uploads/2022/04/Auditing.png" alt="" scale="0">
+                            <div
+                                class="position-absolute top-0 start-0 hidden-div p-4 d-flex align-items-center text-start">
+                                <ul>
+                                    <li> monitors database activities and collects data </li>
+                                    <li>traces object accessed or DDL & DML statements executed by a user</li>
+                                    <li>records all actions in logs</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- section 5-->
+    <div class=" mt-5 mb-5 text-center pb-5">
+        <h2 class="text-center pt-4 fs-1" style="color: #000; line-height: 1.1;"><strong>Agens Enterprise
+                Package</strong></h2>
+        <div class="pt-4" style="font-size: 1.2rem;">
+            <p class="text-center">Agens Enterprise Package comes with a high availability management server that<br>
+                supports backup and data monitoring dashboard that helps enterprise customers manage their data
+                efficiently.</p>
+        </div>
+
+        <div class=" ms-0 me-0 row mt-4 pt-4 d-flex justify-content-center">
+
+            <div class="col-lg-5 pt-4">
+                <div>
+                    <h5 class="text-center"><strong>Agens HA Manager</strong></h5>
+                </div>
+
+                <div>
+                    <h5 class="text-center"><strong style="color: #0082cb;">HA Clustering</strong> –
+                        Failover/Failback, Load-balancing</h5>
+                </div>
+
+                <div class="us-frame"><img width="95%" height="700px"
+                        src="https://bitnine.net/wp-content/uploads/2022/04/img_AHM_eng-1024x922.png"
+                        class="attachment-large size-large" alt=""
+                        srcset="https://bitnine.net/wp-content/uploads/2022/04/img_AHM_eng-1024x922.png 1024w, https://bitnine.net/wp-content/uploads/2022/04/img_AHM_eng-300x270.png 300w, https://bitnine.net/wp-content/uploads/2022/04/img_AHM_eng-768x691.png 768w, https://bitnine.net/wp-content/uploads/2022/04/img_AHM_eng-600x540.png 600w"
+                        sizes="(max-width: 1024px) 100vw, 1024px"></div>
+                <div class="wpb_text_column  vc_custom_1651126317588">
+                    <div class="wpb_wrapper">
+                        <h5 class="text-center">Replication</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5 ms-0 me-0 pt-4">
+                <div class="vc_column-inner">
+                    <div class="wpb_wrapper">
+                        <div class="wpb_wrapper">
+                            <h5 style="text-align: center;"><strong>Agens Enterprise Manager</strong></h5>
+                        </div>
+
+                        <div class="flip-box text-left">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front d-flex align-items-center justify-content-center">
+                                    <h5>Backup/Restore</h5>
+                                </div>
+                                <div class="flip-box-back d-flex align-items-center">
+                                    <ul class="text-start">
+                                        <li>provides a convenient interface for backup & restore</li>
+                                        <li>provides backup & restore features for DB and table objects</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-box mt-2">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front d-flex align-items-center justify-content-center">
+                                    <h5>DB Monitoring Dashboard</h5>
+                                </div>
+                                <div class="flip-box-back d-flex align-items-center">
+                                    <ul class="text-start">
+                                        <li>monitors real-time session & transaction lock </li>
+                                        <li>provides status for server CPU & memory</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-box mt-2">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front d-flex align-items-center justify-content-center">
+                                    <h5>Schedule Management</h5>
+                                </div>
+                                <div class="flip-box-back d-flex align-items-center">
+                                    <ul class="text-start">
+
+                                        <li>provides module for script, SQL job, and scheduling management</li>
+                                        <li>provides UX dedicated to scheduling</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-box mt-2">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front d-flex align-items-center justify-content-center">
+                                    <h5>Database Audit</h5>
+                                </div>
+                                <div class="flip-box-back d-flex align-items-center">
+                                    <ul class="text-start">
+                                        <li>
+                                            enables auditing via user interface
+                                        </li>
+
+                                        <li>view audit results via user interface
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-box mt-2">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front d-flex align-items-center justify-content-center">
+                                    <h5>SQL Monitoring</h5>
+                                </div>
+                                <div class="flip-box-back d-flex align-items-center">
+                                    <ul class="text-start">
+                                        <li>
+                                            collects query statistics required for performance analysis
+                                        </li>
+                                        <li>extracts monitoring results in query
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flip-box mt-2">
+                            <div class="flip-box-inner">
+                                <div class="flip-box-front d-flex align-items-center justify-content-center">
+                                    <h5>Performance Management</h5>
+                                </div>
+                                <div class="flip-box-back d-flex align-items-center">
+                                    <ul class="text-start">
+                                        <li>
+                                            monitors and collects operation status & statistical data
+                                        </li>
+                                        <li>
+                                            provides status reports required for improving performance </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer 1-->
+    <div class=" ms-auto me-auto footer">
+        <div class="row pt-5 mt-5 d-flex justify-content-evenly">
+            <div class="col-lg-2 p-0">
+                <div class="ps-lg-4">
+                    <span class='footer-head d-block mt-3 mb-3'>PRODUCTS</span>
+                    <a class='footer-link d-block mt-3 mb-3' href="https://bitnine.net/agenssql/">Relational
+                        Database</a>
+                    <a class='footer-link d-block mt-3 mb-3' href="https://bitnine.net/graph-database/">Graph
+                        Database</a>
+                    <a class='footer-link d-block mt-3 mb-3' href="https://bitnine.net/graph-database-2/">Graph-based
+                        Solutions</a>
+                </div>
+            </div>
+
+            <div class="col-lg-1 p-0">
+                <a class='footer-link footer-head d-block mt-3 mb-3'
+                    href="https://bitnine.net/graph-database-use-case/">USE CASES</a>
+            </div>
+            <div class="col-lg-1 p-0">
+                <a class='footer-link footer-head d-block mt-3 mb-3' href="https://bitnine.net/services">SERVICES</a>
+            </div>
+            <div class="col-lg-1 p-0">
+                <span class='footer-head d-block mt-3 mb-3'>RESOURCES</span>
+                <a class='footer-link d-block mt-3 mb-3' href="https://bitnine.net/documentation/">Documentation</a>
+                <a class='footer-link d-block mt-3 mb-3' href="https://bitnine.net/learn">Learn</a>
+            </div>
+            <div class="col-lg-1 p-0">
+                <a class='footer-link footer-head d-block mt-3 mb-3' href="https://bitnine.net/blog/">BLOG</a>
+            </div>
+            <div class="col-lg-1 p-0">
+                <span class='footer-head d-block mt-3 mb-3'>COMPANY</span>
+                <a class='footer-link d-block mt-3 mb-3' href="https://bitnine.net/company/">About US</a>
+                <a class='footer-link d-block mt-3 mb-3' href="https://bitnine.net/contact/">Contact</a>
+            </div>
+
+
+        </div>
+        <div class="d-lg-flex justify-content-between footer-contact align-items-center">
+            <div class="cpr"> <i class="fa fa-copyright" aria-hidden="true"></i> 2023 by Bitnine Global
+                Inc. All Rights Reserved.
+            </div>
+
+            <div class="d-flex align-items-center">
+
+                <div><a class="contact-link" href="https://bitnine.net/contact/">CONTACT</a></div>
+
+
+                <div class="w-socials-item github">
+                    <a class="w-socials-item-link" target="_blank" href="https://github.com/bitnine-oss/agensgraph">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+
+                <div class="w-socials-item youtube">
+                    <a class="w-socials-item-link" target="_blank"
+                        href="https://www.youtube.com/channel/UCBJNYamALEqrfxiOCgYyP2g/featured?view_as=subscriber">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+
+                <div class="w-socials-item linkedin">
+                    <a class="w-socials-item-link" target="_blank"
+                        href="https://www.linkedin.com/company/bitnineglobal/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+                <div class="w-socials-item facebook">
+                    <a class="w-socials-item-link" target="_blank" href="https://www.facebook.com/bitninesns/">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+                <div class="w-socials-item medium">
+                    <a class="w-socials-item-link" target="_blank" href="https://www.facebook.com/bitninesns/">
+                        <i class="fa-solid fa-m"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- scroll to the top button -->
+    <button class="w-toplink" onclick='window.scrollTo({top: 0, behavior: "smooth"});'>
+        <a class="" href="#" title="Back to top"><i class="fa-solid fa-angle-up text-light"></i></a>
+    </button>
+
+
+    <!-- a simple script for view/hide scroll to top button -->
+    <script>
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= $(".section-3").offset().top) {
+                $(".w-toplink").css({ display: 'block' });
+            }
+            else {
+                $(".w-toplink").css({ display: 'none' });
+            }
+        });
+
+    </script>
+
+
+</body>
+
+
+</html>

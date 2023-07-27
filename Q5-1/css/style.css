@@ -1,0 +1,81 @@
+:root{
+    --violet:#aa44b1;
+    --pink:#f4429a;
+}
+
+body{
+    background-image: linear-gradient(to right, var(--violet), var(--pink) );
+    position: relative;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+}
+
+.outer-container{
+    position:absolute;
+    left:50%;
+    top:30%;
+    transform: translate(-50%, -30%);
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    width:90%;
+}
+
+@media (min-width:500px){
+    .outer-container{
+        width:70%;
+    }
+    
+}
+
+
+@media (min-width:725px){
+    .outer-container{
+        width:50%;
+    }
+    
+}
+
+
+@media (min-width:1060px){
+    .outer-container{
+        width:34%;
+    }
+    
+}
+
+
+.switch button{
+    font-size: 1.2rem;
+}
+
+.active{
+    background-image: linear-gradient(to right, var(--violet), var(--pink) );
+    color:white;
+}
+
+.active:hover{
+    color:white !important;
+
+}
+
+.link{
+    text-decoration: none;
+    color:var(--violet);
+    transition: color 0.1s linear;
+}
+
+.link:hover{
+    color:var(--pink);
+}
+
+.forgot{
+    font-size: 0.8rem;
+}
+
+.btn:focus, .no-shadow:focus{
+box-shadow: 0 0 0 0 rgba(0,0,0,0) !important;
+}
+
+.fa-eye-slash:hover, .fa-eye:hover{
+    color:var(--pink);
+}

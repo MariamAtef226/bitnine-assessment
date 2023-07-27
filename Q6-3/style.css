@@ -1,0 +1,10 @@
+:root{
+    --violet:#aa44b1;
+    --pink:#f4429a;
+}
+
+body{
+    background-image: linear-gradient(to right, var(--violet), var(--pink) );
+    position: relative;
+    font-family: 'Poppins', 'Roboto', sans-serif;
+}
